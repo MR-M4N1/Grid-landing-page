@@ -1,0 +1,354 @@
+@font-face {
+    font-family: "Inter";
+    src: url("./assets/fonts/inter/inter-variable.ttf") format("truetype");
+    font-weight: 100 900;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Blue-200: hsl(224, 100%, 95%);
+    --Blue-400: hsl(220, 100%, 64%);
+    --Blue-400-descripton: hsl(220, 100%, 85%);
+    --Blue-600: hsl(228, 100%, 60%);
+    --Blue-700: hsl(228, 99%, 58%);
+    --Black: hsl(0, 0%, 0%);
+    --Black-25percent-opacity: hsla(0, 0%, 0%, 0.25);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline solid var(--White);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--White);
+    outline-offset: 4px;
+}
+
+body {
+    background-color: var(--Blue-700);
+    font-family: "Inter";
+}
+
+button {
+    border: none;
+    background-color: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header {
+    width: calc(100% - 50px);
+    padding: 0 25px;
+    height: 72px;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--White);
+    border-bottom: 1px solid var(--Blue-400);
+    z-index: 200;
+    position: relative;
+    background-color: var(--Blue-700);
+
+}
+
+.orgContainer {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.sideCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--White);
+    margin-right: 5px;
+}
+
+.orgName {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+
+.navHam {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.heroSection {
+    min-height: 340px;
+    padding: 0 35px;
+    border-bottom: 1px solid var(--Blue-400);
+}
+
+h1 {
+    margin-top: 58px;
+    font-size: 44px;
+    line-height: 1.1;
+    color: var(--White);
+    font-weight: 400;
+}
+
+.heroDescription {
+    color: var(--Blue-200);
+    font-size: 17px;
+    margin-top: 25px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.statsSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.statsContainer {
+    display: flex;
+    padding: 0 25px;
+    flex-direction: column;
+    border-bottom: 1px solid var(--Blue-400);
+    height: 350px;
+}
+
+
+.statsContainer:hover {
+    background-color: var(--Blue-600);
+    cursor: pointer;
+}
+
+.statshead {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.statsNumber {
+    color: var(--White);
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.statsPic {
+    margin-right: auto;
+}
+
+.statsfoot {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.statsTitle {
+    color: var(--Blue-200);
+}
+
+.statsDescription {
+    color: var(--Blue-400-descripton);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: var(--Blue-400-descripton);
+    padding: 0 35px;
+    font-size: 14px;
+    height: 60px;
+    margin-top: 30px
+}
+
+.menuPanel {
+    position: absolute;
+    right: 0;
+    height: 350px;
+    width: 100%;
+    top: 73px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    background-color: var(--Blue-700);
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.menuPanel a {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--White);
+
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--Black-25percent-opacity);
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+.userClicked {
+    position: relative;
+}
+
+.attribution {
+    text-shadow: 1px 1px 1.5px black;
+    position: fixed;
+    right: 25%;
+    left: 25%;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--Blue-400-descripton);
+    text-shadow: 1px 1px 1.5px black;
+    font-size: 13px;
+}
+
+.attribution a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 374px) {
+    .userClicked .heroDescription {
+        display: none;
+    }
+}
+
+@media (min-width: 1023px) {
+
+
+    .userClicked {
+        position: relative;
+    }
+
+    header {
+        position: relative;
+        width: calc(100% - 80px);
+        padding: 0 40px;
+        z-index: 200;
+    }
+
+    main {
+        flex-direction: row;
+
+        border-bottom: 1px solid var(--Blue-400);
+    }
+
+    .heroSection {
+        width: 41%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-right: 1px solid var(--Blue-400);
+        border-bottom: none;
+        padding: 0 50px;
+
+    }
+
+    h1 {
+        font-size: 60px;
+        width: 75%;
+        font-weight: 500;
+    }
+
+    .heroDescription {
+        width: 70%;
+        margin-top: 40px;
+    }
+
+    .statsSection {
+        height: 100%;
+        width: 59%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .statsContainer {
+        height: 330px;
+        padding: 0 30px;
+    }
+
+    .statshead {
+        margin-top: 30px;
+    }
+
+    .thirdStatsContainer,
+    .fourthStatsContainer {
+        border-bottom: none;
+    }
+
+    .firstStatsContainer,
+    .thirdStatsContainer {
+        border-right: 1px solid var(--Blue-400);
+    }
+
+    footer {
+        margin-top: 0;
+        flex-direction: row;
+        align-items: center;
+        height: 80px;
+        padding: 0 50px;
+    }
+
+    .CharityText {
+        margin-left: auto;
+    }
+
+    .menuPanel {
+        top: 73px;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        width: 400px;
+        padding: 0 50px;
+        padding-top: 70px;
+        justify-content: flex-start;
+        align-items: flex-end;
+        box-sizing: border-box;
+    }
+
+    .userClicked {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    footer p {
+        color: var(--Blue-200);
+    }
+
+}
