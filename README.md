@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here for Solution]()
-- Live Site URL: [Click here for Live Site]()
+- Solution URL: [Click here for Solution](https://github.com/MR-M4N1/Grid-landing-page.git)
+- Live Site URL: [Click here for Live Site](https://mr-m4n1.github.io/Grid-landing-page/)
 
 ## My process
 
